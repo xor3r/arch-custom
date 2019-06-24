@@ -59,13 +59,12 @@ first-day-of-week=7
 theme='Adapta'
 titlebar-font='DejaVu Sans Mono Bold 12'
 
-
 [org/nemo/desktop]
 font='DejaVu Sans Semi-Condensed 12'
 
 [org/nemo/preferences]
 context-menus-show-all-actions=true
-click-policy='single'
+click-policy='double'
 show-location-entry=true
 thumbnail-limit=uint64 8589934592
 
