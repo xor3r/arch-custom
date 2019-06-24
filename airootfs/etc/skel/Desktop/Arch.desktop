@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=Install Arch
+Terminal=false
+Name=Install Arch
+Exec=sudo lxterminal -e /abif-master/abif
+Type=Application
+Icon=distributor-logo-archlinux
+Name[en_US]=Arch.desktop
