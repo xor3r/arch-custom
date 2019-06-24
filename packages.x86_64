@@ -49,6 +49,7 @@ conky
 file-roller
 firefox
 gparted
+git
 
 # arch iso
 arch-install-scripts
