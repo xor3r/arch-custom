@@ -6,6 +6,17 @@ xterm
 
 # audio
 alsa-utils
+strawberry
+
+# video
+vlc
+
+# smartphone
+kdeconnect
+
+# images
+gimp
+shotwell
 
 # vbox
 virtualbox-guest-utils
@@ -22,7 +33,6 @@ lightdm-gtk-greeter
 
 # additional software
 lxterminal
-gedit
 leafpad
 xdg-user-dirs
 bash-completion
@@ -38,15 +48,12 @@ broadcom-wl
 btrfs-progs
 clonezilla
 crda
-darkhttpd
 ddrescue
 dhclient
 dialog
 dmraid
 dnsmasq
-dnsutils
 dosfstools
-elinks
 ethtool
 exfat-utils
 f2fs-tools
@@ -54,7 +61,6 @@ fsarchiver
 gnu-netcat
 gpm
 gptfdisk
-grml-zsh-config
 grub
 hdparm
 ipw2100-fw
@@ -68,7 +74,6 @@ mtools
 ndisc6
 nfs-utils
 nilfs-utils
-nmap
 ntfs-3g
 ntp
 openconnect
@@ -89,8 +94,6 @@ sudo
 tcpdump
 testdisk
 usb_modeswitch
-vim-minimal
-vpnc
 wget
 wireless-regdb
 wireless_tools
