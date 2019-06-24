@@ -11,8 +11,12 @@ ttf-dejavu
 alsa-utils
 strawberry
 
+# office software
+libreoffice
+
 # video
 vlc
+flashplugin
 
 # smartphone
 kdeconnect
@@ -36,6 +40,8 @@ lightdm-gtk-greeter
 
 # additional software
 lxterminal
+transmission-gtk
+dropbox
 leafpad
 xdg-user-dirs
 bash-completion
