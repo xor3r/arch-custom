@@ -1,7 +1,7 @@
 Keyboard Shorcuts:
 
 CTRL+ALT+t = lxterminal
-CTRL+ALT+n = leafpad # a basic text editor
-ALT+h = Nemo # the file manager
+CTRL+ALT+n = leafpad
+ALT+h = Nemo
 SUPER_L SUPER_R = Menu
 ALT+F2 = Run Dialog
