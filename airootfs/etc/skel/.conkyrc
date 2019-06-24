@@ -1,0 +1,112 @@
+-- vim: ts=4 sw=4 noet ai cindent syntax=lua
+--[[
+Conky, a system monitor, based on torsmo
+
+Any original torsmo code is licensed under the BSD license
+
+All code written since the fork of torsmo is licensed under the GPL
+
+Please see COPYING for details
+
+Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+Copyright (c) 2005-2012 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+All rights reserved.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+]]
+
+conky.config = {
+    alignment = 'top_right',
+    background = false,
+    border_width = 2,
+    cpu_avg_samples = 2,
+    default_color = 'grey',
+    double_buffer = true,
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'PizzaDude Bullets:size=13',
+    gap_x = 5,
+    gap_y = 3,
+    minimum_height = 5,
+    minimum_width = 5,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value = 200,
+    stippled_borders = 0,
+    update_interval = 4.0,
+    uppercase = false,
+    use_spacer = left,
+    show_graph_scale = false,
+    show_graph_range = false
+}
+
+conky.text = [[
+${color grey}Conky - $sysname 
+${color #5b6dad}$hr
+${font sans-serif:bold:size=13}${color e07401}CPU${font sans-serif:normal:size=11}
+${color grey}CPU1: ${cpu cpu1}% ${cpubar cpu1}
+${color grey}CPU2: ${cpu cpu2}% ${cpubar cpu2}
+${color grey}CPU3: ${cpu cpu3}% ${cpubar cpu3}
+${color grey}CPU4: ${cpu cpu4}% ${cpubar cpu4}
+${color grey}CPU5: ${cpu cpu5}% ${cpubar cpu5}
+${color grey}CPU6: ${cpu cpu6}% ${cpubar cpu6}
+${color grey}CPU7: ${cpu cpu7}% ${cpubar cpu7}
+${color grey}CPU8: ${cpu cpu8}% ${cpubar cpu8}
+Temperature ${execi 8 sensors | grep 'Core 0' | cut -c18-24 | sed '/^$/d'}
+${color #5b6dad}$hr
+${color grey}CPU: ${color grey}$cpu%
+${color #5b6dad} ${cpugraph 16,140 000000 7f8ed3}
+${color grey}RAM: $color$mem/$memmax
+${color #5b6dad} ${membar 6,140}
+${color grey}Swap:$color$swap/$swapmax
+${color #5b6dad} ${swapbar 6,140}
+${color #5b6dad}$hr
+${color grey}Processes:$color $processes  ${color grey}Running:$color $running_processes
+${color #5b6dad}$hr
+${color grey}File systems:
+$color${fs_used /}/${fs_size /} ${fs_bar 6 /}
+${color #5b6dad}$hr
+${color grey}Name              PID   CPU%   MEM%
+${color lightgrey} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
+${color lightgrey} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
+${color lightgrey} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
+${color lightgrey} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
+${color #5b6dad}$hr
+${if_up enp0s31f6}${color e07401}ETHERNET (IP: ${addr enp0s31f6})$color
+${color A6A6A6}Down: ${downspeed enp0s31f6} kB/s ${alignr}Up: ${upspeed enp0s31f6} kB/s$color
+${color A6A6A6}${downspeedgraph enp0s31f6 25,140 000000 970300} ${alignr}${upspeedgraph enp0s31f6 25,140 000000 297F00}$color
+${color A6A6A6}Total: ${totaldown enp0s31f6} ${alignr}Total: ${totalup enp0s31f6}$color$endif
+${color #5b6dad}$hr
+${if_up wlp3s0}${color e07401}WIRELESS (IP: ${addr wlp3s0}  Q: ${wireless_link_qual_perc wlp3s0}%)$color
+${color A6A6A6}Essid: ${wireless_essid wlp3s0} ${alignr}Rate: ${wireless_bitrate wlp3s0}${color}
+${color A6A6A6}Down: ${downspeed wlp3s0} kB/s ${alignr}Up: ${upspeed wlp3s0} kB/s$color
+${color A6A6A6}${downspeedgraph wlp3s0 25,140 000000 970300} ${alignr}${upspeedgraph wlp3s0 25,140 000000 297F00}$color
+${color A6A6A6}Total: ${totaldown wlp3s0} ${alignr}Total: ${totalup wlp3s0}$color$endif
+${font sans-serif:bold:size=10}${color eee}DISK ${hr 2}
+${font sans-serif:normal:size=10}Root $alignc ${fs_used /} / ${fs_size /} $alignr${fs_used_perc /}%
+${fs_bar /}
+]]
+
