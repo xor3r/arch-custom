@@ -39,9 +39,9 @@ lightdm
 lightdm-gtk-greeter
 
 # additional software
+rclone
 lxterminal
 transmission-gtk
-dropbox
 leafpad
 xdg-user-dirs
 bash-completion
