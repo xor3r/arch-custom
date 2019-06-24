@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Background Conky
+Exec=conkyd
+Icon=utilities-terminal
+Type=Application
+Categories=System;Utility;
