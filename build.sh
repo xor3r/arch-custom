@@ -3,7 +3,7 @@
 set -e -u
 
 iso_name=ArchLinuxCustom
-iso_label="CinammonARCH_$(date +%Y%m)"
+iso_label="CinammonARCH"
 iso_publisher="Arch Linux <http://www.archlinux.org>"
 iso_application="Arch Linux Live/Rescue CD"
 iso_version=$(date +%Y.%m.%d)
