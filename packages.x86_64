@@ -4,6 +4,9 @@ xorg-xinit
 xorg-twm
 xterm
 
+# fonts
+ttf-dejavu
+
 # audio
 alsa-utils
 strawberry
