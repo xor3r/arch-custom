@@ -14,7 +14,7 @@ name='Firefox'
 
 [org/cinnamon/desktop/keybindings/custom-keybindings/custom0]
 binding=['<Primary><Alt>n']
-command='gedit'
+command='leafpad'
 name='Text'
 
 [org/cinnamon/desktop/keybindings]
@@ -39,7 +39,7 @@ secondary-color='#5789ca'
 [org/cinnamon/desktop/background/slideshow]
 image-source='directory:///home/liveuser/Pictures'
 random-order=true
-delay=5
+delay=3
 slideshow-enabled=true
 
 [org/cinnamon/theme]
@@ -48,12 +48,20 @@ name='Adapta-Nokto'
 [org/cinnamon/desktop/interface]
 icon-theme='Faenza-Dark'
 clock-show-seconds=true
-clock-use-24h=false
+clock-use-24h=true
+font-name='DejaVu Sans Oblique 12'
+toolkit-accessibility=false
+text-scaling-factor=1.0
 gtk-theme='Adapta-Nokto'
 first-day-of-week=7
 
 [org/cinnamon/desktop/wm/preferences]
 theme='Adapta'
+titlebar-font='DejaVu Sans Mono Bold 12'
+
+
+[org/nemo/desktop]
+font='DejaVu Sans Semi-Condensed 12'
 
 [org/nemo/preferences]
 context-menus-show-all-actions=true
@@ -78,6 +86,11 @@ sort-directories-first=false
 date-format='regular'
 sort-order='ascending'
 location-mode='path-bar'
+
+[org/gnome/desktop/interface]
+document-font-name='DejaVu Sans Oblique Semi-Condensed 12'
+monospace-font-name='DejaVu Sans Mono Oblique 12'
+toolkit-accessibility=false
 
 [org/mate/system-monitor]
 current-tab=2
