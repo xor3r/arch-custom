@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Custom Cinnamon Theme
+Exec=cinatheme
+Icon=utilities-terminal
+Type=Application
+Categories=System;Utility;
