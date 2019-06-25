@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Host Config
-Comment=Run only on host system! Removes vbox packages!
-Exec=~/hostconfig.sh
-Icon=gtk-index
-Terminal=false
-Type=Application
