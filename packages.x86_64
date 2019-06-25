@@ -50,6 +50,7 @@ file-roller
 firefox
 gparted
 git
+fakeroot
 
 # arch iso
 arch-install-scripts
