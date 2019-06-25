@@ -6,4 +6,5 @@ cd ~/
 git clone https://aur.archlinux.org/yay.git
 cd yay/
 makepkg -si
-rm -f ~/autoconfig.sh ~/Desktop/autoconfig.desktop ~/Desktop/installArch.desktop
+rm -f ~/Desktop/autoconfig.desktop ~/Desktop/installArch.desktop /usr/share/applications/bssh.desktop /usr/share/applications/bvnc.desktop /usr/share/applications/avahi-discover.desktop /usr/share/applications/qv4l2.desktop /usr/share/applications/qvidcap.desktop
+rm -f ~/autoconfig.sh
