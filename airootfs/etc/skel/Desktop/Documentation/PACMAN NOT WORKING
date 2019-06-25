@@ -1,4 +1,8 @@
-The FIRST thing to do is to update your system ("$" is the prompt):
+*********************
+*   Pacman rescue   *
+*********************
+
+The FIRST thing to do is to update your system:
 
 $ sudo pacman -Syyu
 
