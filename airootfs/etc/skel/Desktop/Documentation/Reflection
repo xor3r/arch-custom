@@ -1,0 +1,6 @@
+*********************************
+Setup a reflection for packages *
+*********************************
+
+sudo pacman -Syy  # update your system's db
+reflector -c 'Your-Country' -f 12 -l 12 -n 12 --verbose --save /etc/pacman.d/mirrorlist
