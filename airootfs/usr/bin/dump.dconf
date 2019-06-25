@@ -85,7 +85,7 @@ trash-icon-visible=true
 [org/nemo/preferences]
 click-policy='double'
 context-menus-show-all-actions=true
-show-hidden-files=true
+show-hidden-files=false
 show-location-entry=true
 thumbnail-limit=uint64 8589934592
 
