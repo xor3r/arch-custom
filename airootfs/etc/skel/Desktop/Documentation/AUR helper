@@ -1,3 +1,7 @@
+**************************************************
+* Install YAY for searching in user repositories *
+**************************************************
+
 Open up terminal and run following commands in order to install YAY - AUR helper:
 
 $ cd ~/
