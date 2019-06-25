@@ -11,9 +11,6 @@ ttf-dejavu
 alsa-utils
 strawberry
 
-# office software
-libreoffice
-
 # video
 vlc
 flashplugin
