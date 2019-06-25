@@ -1,24 +1,24 @@
 Open up terminal and run following commands:
 
 # If not installed yet
-sudo pacman -S bluez
-sudo pacman -S bluez-utils
-sudo pacman -S blueman
+
+$ sudo pacman -S bluez
+$ sudo pacman -S bluez-utils
+$ sudo pacman -S blueman
 
 # Main commands
-sudo modprobe btusb
-sudo systemctl enable bluetooth.service
+$ sudo modprobe btusb
+$ sudo systemctl enable bluetooth.service
 
 # Establish connection via console
-bluetoothctl
+$ bluetoothctl
 
 # Follow instructions on https://wiki.archlinux.org/index.php/Bluetooth#Pairing
-(optional) select MAC_address
-power on
-devices
-scan on
-agent on
-pair MAC_address
-trust MAC_address
-connect MAC_address
-
+(optional) $ select MAC_address
+$ power on
+$ devices
+$ scan on
+$ agent on
+$ pair MAC_address
+$ trust MAC_address
+$ connect MAC_address
