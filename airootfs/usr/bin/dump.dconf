@@ -1,11 +1,25 @@
 [org/cinnamon]
-next-applet-id=15
 enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:show-desktop@cinnamon.org:1', 'panel1:left:2:panel-launchers@cinnamon.org:2', 'panel1:left:3:window-list@cinnamon.org:3', 'panel1:right:0:notifications@cinnamon.org:4', 'panel1:right:1:user@cinnamon.org:5', 'panel1:right:2:removable-drives@cinnamon.org:6', 'panel1:right:3:keyboard@cinnamon.org:7', 'panel1:right:4:bluetooth@cinnamon.org:8', 'panel1:right:5:network@cinnamon.org:9', 'panel1:right:6:sound@cinnamon.org:10', 'panel1:right:7:power@cinnamon.org:11', 'panel1:right:8:systray@cinnamon.org:12', 'panel1:right:9:calendar@cinnamon.org:13', 'panel1:right:10:windows-quick-list@cinnamon.org:14']
 enabled-desklets=@as []
+next-applet-id=15
+no-adjacent-panel-barriers=false
+panel-edit-mode=false
 panel-launchers=['DEPRECATED']
+panels-height=['1:47']
 
 [org/cinnamon/settings-daemon/peripherals/keyboard]
 numlock-state='on'
+
+[org/cinnamon/desktop/a11y/applications]
+screen-keyboard-enabled=false
+screen-reader-enabled=false
+
+[org/cinnamon/desktop/a11y/mouse]
+dwell-click-enabled=false
+dwell-threshold=10
+dwell-time=1.2
+secondary-click-enabled=false
+secondary-click-time=1.2
 
 [org/cinnamon/desktop/keybindings/custom-keybindings/custom1]
 binding=['<Super>w']
@@ -23,6 +37,9 @@ custom-list=['custom0']
 [org/cinnamon/desktop/keybindings/media-keys]
 home=['<Alt>h', 'XF86Explorer']
 
+[org/cinnamon/settings-daemon/plugins/xsettings]
+hinting='slight'
+
 [org/cinnamon/desktop/media-handling]
 autorun-never=false
 
@@ -31,36 +48,39 @@ exec='lxterminal'
 
 [org/cinnamon/desktop/background]
 color-shading-type='solid'
-picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/pictures/918290.jpg'
+picture-options='centered'
+picture-uri='file:///usr/share/backgrounds/pictures/749434.png'
 primary-color='#023c88'
 secondary-color='#5789ca'
 
 [org/cinnamon/desktop/background/slideshow]
 delay=1
-image-source='xml:///usr/share/backgrounds/pictures/'
+image-source='directory:///usr/share/backgrounds/pictures'
 random-order=true
 slideshow-enabled=true
 
 [org/cinnamon/theme]
 name='Adapta-Nokto'
+symbolic-relative-size=0.90000000000000002
 
 [org/cinnamon/desktop/interface]
-icon-theme='Faenza-Dark'
 clock-show-seconds=true
 clock-use-24h=true
-font-name='DejaVu Sans Oblique 12'
-toolkit-accessibility=false
-text-scaling-factor=1.0
-gtk-theme='Adapta-Nokto'
 first-day-of-week=7
+font-name='DejaVu Sans Oblique 14'
+gtk-theme='Adapta-Nokto'
+icon-theme='Faenza-Dark'
+text-scaling-factor=1.0
+toolkit-accessibility=false
 
 [org/cinnamon/desktop/wm/preferences]
 theme='Adapta'
-titlebar-font='DejaVu Sans Mono Bold 12'
+titlebar-font='DejaVu Sans Mono Bold 16'
 
 [org/nemo/desktop]
-font='DejaVu Sans Semi-Condensed 12'
+font='DejaVu Sans Semi-Condensed 13'
+home-icon-visible=true
+trash-icon-visible=true
 
 [org/nemo/preferences]
 click-policy='double'
@@ -70,26 +90,26 @@ show-location-entry=true
 thumbnail-limit=uint64 8589934592
 
 [org/nemo/window-state]
-start-with-sidebar=true
-geometry='800x550+195+94'
+geometry='800x550+426+188'
 maximized=false
 sidebar-bookmark-breakpoint=0
+start-with-sidebar=true
 
 [org/gtk/settings/file-chooser]
-sort-column='name'
-sidebar-width=148
-window-position=(215, 87)
-show-size-column=true
-show-hidden=false
-window-size=(778, 562)
-sort-directories-first=false
 date-format='regular'
-sort-order='ascending'
 location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+sidebar-width=208
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+window-position=(209, 84)
+window-size=(785, 562)
 
 [org/gnome/desktop/interface]
-document-font-name='DejaVu Sans Oblique Semi-Condensed 12'
-monospace-font-name='DejaVu Sans Mono Oblique 12'
+document-font-name='DejaVu Sans Oblique Semi-Condensed 15'
+monospace-font-name='DejaVu Sans Mono Oblique 15'
 toolkit-accessibility=false
 
 [org/mate/system-monitor]
