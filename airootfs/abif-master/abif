@@ -430,9 +430,6 @@ create_new_user() {
     # If the first (or only) user account, then change the live account
 	if [[ -e ${MOUNTPOINT}/home/$ISO_USER ]]; then
 	   arch_chroot "passwd $ISO_USER" < /tmp/.passwd >/dev/null 2>>/tmp/.errlog
-	   sudo systemctl enable lightdm.service
-	   systemctl enable lightdm.service
-	   arch_chroot "systemctl enable lightdm.service"
 	   check_for_error
         
 	   # Distro-specific configuration for entered username
@@ -452,9 +449,6 @@ create_new_user() {
 	   check_for_error
 	else
 	   # If the live account has already been changed, create a new user account
-	   sudo systemctl enable lightdm.service
-	   systemctl enable lightdm.service
-           arch_chroot "systemctl enable lightdm.service"
 	   arch_chroot "useradd ${USER} -m -g users -G wheel,storage,power,network,video,audio,lp,log -s /bin/bash" 2>/tmp/.errlog   
 	   arch_chroot "passwd ${USER}" < /tmp/.passwd >/dev/null 2>>/tmp/.errlog  
      
@@ -1458,10 +1452,10 @@ install_root(){
   sed -i 's/.*pam_wheel\.so/#&/' ${MOUNTPOINT}/etc/pam.d/su 2>>/tmp/.errlog
  
   # user files
-  rm -rf $MOUNTPOINT/home/$ISO_USER/Desktop/Spice.desktop 2>>/tmp/.errlog
-  rm -r ${MOUNTPOINT}/home/$ISO_USER/.bash_profile 2>>/tmp/.errlog
-  rm -r ${MOUNTPOINT}/home/$ISO_USER/.xinitrc 2>>/tmp/.errlog
-  rm -r ${MOUNTPOINT}/home/$ISO_USER/.xsession 2>>/tmp/.errlog
+  rm -rf $MOUNTPOINT/home/$ISO_USER/Desktop/installArch.desktop 2>>/tmp/.errlog
+  # rm -r ${MOUNTPOINT}/home/$ISO_USER/.bash_profile 2>>/tmp/.errlog
+  # rm -r ${MOUNTPOINT}/home/$ISO_USER/.xinitrc 2>>/tmp/.errlog
+  # rm -r ${MOUNTPOINT}/home/$ISO_USER/.xsession 2>>/tmp/.errlog
   rm -r ${MOUNTPOINT}/home/$ISO_USER/bash_root 2>>/tmp/.errlog
 
   # clean out archiso files from install
@@ -1488,11 +1482,14 @@ install_root(){
   [[ -e /tmp/vconsole.conf ]] && cp /tmp/vconsole.conf ${MOUNTPOINT}/etc/vconsole.conf 2>>/tmp/.errlog
   [[ -e /tmp/01-keyboard-layout.conf ]] && cp -f /tmp/01-keyboard-layout.conf ${MOUNTPOINT}/etc/X11/xorg.conf.d/$(ls ${MOUNTPOINT}/etc/X11/xorg.conf.d/ | grep "keyboard") 2>>/tmp/.errlog
   
-  # Display Manager
-  arch_chroot "systemctl enable lxdm" 2>>/tmp/.errlog
-  cp -f /inst/lxdm.conf ${MOUNTPOINT}/etc/lxdm/lxdm.conf 2>>/tmp/.errlog
-  [[ -d ${MOUNTPOINT}/inst ]] && rm -R ${MOUNTPOINT}/inst &> /dev/null 2>>/tmp/.errlog
+  # Enable lightdm
+  arch_chroot "systemctl enable lightdm.service" 2>>/tmp/.errlog
   check_for_error
+  
+  # Display Manager
+  # arch_chroot "systemctl enable lxdm" 2>>/tmp/.errlog
+  # cp -f /inst/lxdm.conf ${MOUNTPOINT}/etc/lxdm/lxdm.conf 2>>/tmp/.errlog
+  # [[ -d ${MOUNTPOINT}/inst ]] && rm -R ${MOUNTPOINT}/inst &> /dev/null 2>>/tmp/.errlog
   
 }
 
