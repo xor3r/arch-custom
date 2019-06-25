@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Autoconfig
+Comment=Add config files for user, update pacman, etc.
+Exec=~/Desktop/autoconfig.sh
+Icon=gtk-index
+Terminal=false
+Type=Application
