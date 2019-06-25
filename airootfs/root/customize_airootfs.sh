@@ -9,9 +9,9 @@ ln -sf /usr/share/zoneinfo/UTC /etc/localtime
 
 usermod -s /usr/bin/bash root
 cp -aT /etc/skel/ /root/
-useradd -m -p "" -g root -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,power,wheel" -s /bin/bash liveuser
+useradd -m -p "" -g users -G adm,audio,floppy,log,network,rfkill,scanner,storage,optical,power,wheel -s /bin/bash liveuser
 #chmod 700 /root
-chown -R liveuser:root /home/liveuser
+chown -R liveuser:users /home/liveuser
 
 sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
