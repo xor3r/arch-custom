@@ -30,16 +30,16 @@ autorun-never=false
 exec='lxterminal'
 
 [org/cinnamon/desktop/background]
-picture-uri='file:///usr/share/backgrounds/gnome/Blinds.jpg'
 color-shading-type='solid'
-primary-color='#023c88'
 picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/pictures/918290.jpg'
+primary-color='#023c88'
 secondary-color='#5789ca'
 
 [org/cinnamon/desktop/background/slideshow]
-image-source='directory:///home/liveuser/Pictures'
+delay=1
+image-source='xml:///usr/share/backgrounds/pictures/'
 random-order=true
-delay=3
 slideshow-enabled=true
 
 [org/cinnamon/theme]
