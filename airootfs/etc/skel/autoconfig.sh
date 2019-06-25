@@ -6,5 +6,4 @@ cd ~/
 git clone https://aur.archlinux.org/yay.git
 cd yay/
 makepkg -si
-cd ~/Desktop
-rm -f autoconfig.sh autoconfig.desktop installArch.desktop
+rm -f ~/autoconfig.sh ~/Desktop/autoconfig.desktop ~/Desktop/installArch.desktop
