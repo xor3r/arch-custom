@@ -51,6 +51,7 @@ firefox
 gparted
 git
 fakeroot
+reflector
 
 # arch iso
 arch-install-scripts
