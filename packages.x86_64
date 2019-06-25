@@ -49,6 +49,7 @@ gparted
 git
 fakeroot
 reflector
+mlocate
 
 # arch iso
 arch-install-scripts
