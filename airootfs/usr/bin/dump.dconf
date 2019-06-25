@@ -48,7 +48,7 @@ exec='lxterminal'
 
 [org/cinnamon/desktop/background]
 color-shading-type='solid'
-picture-options='centered'
+picture-options='zoom'
 picture-uri='file:///usr/share/backgrounds/pictures/749434.png'
 primary-color='#023c88'
 secondary-color='#5789ca'
