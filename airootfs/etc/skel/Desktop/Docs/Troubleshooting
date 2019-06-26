@@ -1,0 +1,28 @@
+***********************************
+*         Troubleshooting         *
+***********************************
+No Audio
+
+Type in the terminal:
+$ alsamixer
+Press F6 & choose default sound card
+Press 'm' on master
+Press PgUp to increase the volume
+Repeat for any channels if needed
+Close alsamixer by pressing the Esc key
+
+While still in a terminal, check output with this command:
+## CAUTION! make sure your speakers are not on full volume !! ##
+
+$ speaker-test -c2 
+*****************************
+*   Pacman Error Message    *
+*****************************
+
+The FIRST thing to do is to update your system:
+$ sudo pacman -Syyu
+
+if there is an error when updating, check your internet connection. Otherwise, try refreshing 
+the package keys (used to verify that packages are official) before trying again:
+
+$ sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys

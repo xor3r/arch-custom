@@ -1,0 +1,27 @@
+***********************
+*         IRC         *
+***********************
+
+Nice guides can be found here:
+https://carina.org.uk/screenirssi.shtml
+https://quadpoint.org/articles/irssi/
+https://gist.github.com/xero/2d6e4b061b4ecbeb9f99
+https://en.wikipedia.org/wiki/Wikipedia:IRC/Tutorial
+
+# Replace <...> with your data!
+
+
+# Start irssi:
+$ irssi
+
+# Connect to some server:
+$ /connect chat.freenode.net
+
+# Set your nickname:
+$ /nick <nickname>
+
+# Register:
+$ /msg NickServ REGISTER <password> <youremail@example.com>
+
+# Join/Start a channel:
+$ /join #<channel-name>
