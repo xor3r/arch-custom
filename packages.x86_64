@@ -11,6 +11,12 @@ ttf-dejavu
 alsa-utils
 strawberry
 
+# office
+libreoffice-fresh
+
+# IRC
+irssi
+
 # video
 vlc
 flashplugin
@@ -35,7 +41,6 @@ lightdm
 lightdm-gtk-greeter
 
 # additional software
-rclone
 lxterminal
 transmission-gtk
 leafpad
@@ -49,18 +54,20 @@ git
 fakeroot
 reflector
 mlocate
+fox
+
+# java (archlinux-java to switch version)
+jre8-openjdk-headless
+jre12-openjdk-headless
 
 # arch iso
 arch-install-scripts
 b43-fwcutter
 broadcom-wl
 btrfs-progs
-clonezilla
-crda
 ddrescue
 dhclient
 dialog
-dmraid
 dnsmasq
 dosfstools
 ethtool
@@ -75,7 +82,6 @@ os-prober
 hdparm
 ipw2100-fw
 ipw2200-fw
-irssi
 iwd
 lftp
 linux-atm
