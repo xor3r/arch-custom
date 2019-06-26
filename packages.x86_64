@@ -54,7 +54,6 @@ git
 fakeroot
 reflector
 mlocate
-fox
 
 # java (archlinux-java to switch version)
 jre8-openjdk-headless
