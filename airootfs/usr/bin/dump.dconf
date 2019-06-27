@@ -107,6 +107,10 @@ sort-order='ascending'
 window-position=(209, 84)
 window-size=(785, 562)
 
+[org/cinnamon/settings-daemon/peripherals/touchpad]
+horizontal-scrolling=true
+motion-threshold=1
+
 [org/gnome/desktop/interface]
 document-font-name='DejaVu Sans Oblique Semi-Condensed 15'
 monospace-font-name='DejaVu Sans Mono Oblique 15'
