@@ -1,0 +1,14 @@
+************************
+*  Conky Configuration *
+************************
+
+Conky is a system monitor, which can be manually configured
+
+1. Create a file named .conkyrc in your home directory
+2.1. Then, you need to figure out how to use its syntax
+2.2. Check out config files on the Internet, or use my theme: https://github.com/damoklov/conky-minimal
+3. Run conky from your terminal or application menu: 
+   $ conky -d
+4. Edit config file .conkyrc while conky is running on the background
+5. Save document to see changes (CTRL+S)
+6. Go on and experiment!
