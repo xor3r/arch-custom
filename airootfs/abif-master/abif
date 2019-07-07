@@ -1486,7 +1486,7 @@ install_root(){
   [[ -e /tmp/01-keyboard-layout.conf ]] && cp -f /tmp/01-keyboard-layout.conf ${MOUNTPOINT}/etc/X11/xorg.conf.d/$(ls ${MOUNTPOINT}/etc/X11/xorg.conf.d/ | grep "keyboard") 2>>/tmp/.errlog
   
   # Enable lightdm
-  arch_chroot "systemctl enable lightdm.service" 2>>/tmp/.errlog
+  arch_chroot "systemctl enable lightdm -f" 2>>/tmp/.errlog
   check_for_error
   
   # Display Manager
