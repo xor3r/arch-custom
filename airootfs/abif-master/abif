@@ -1491,7 +1491,6 @@ install_root(){
   
   # Enable screenlocker on suspension
   arch_chroot "gsettings set org.cinnamon.settings-daemon.plugins.power lock-on-suspend true" 2>>/tmp/.errlog
-  gsettings set org.cinnamon.settings-daemon.plugins.power lock-on-suspend true 2>>/tmp/.errlog
   check_for_error
   
   # Display Manager
