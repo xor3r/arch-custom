@@ -194,7 +194,7 @@ check_for_error() {
 
  if [[ $? -eq 1 ]] && [[ $(cat /tmp/.errlog | grep -i "error") != "" ]]; then
     dialog --backtitle "$VERSION - $SYSTEM ($ARCHI)" --title " $_ErrTitle " --msgbox "$(cat /tmp/.errlog)" 0 0
-    echo "" > /tmp/.errlog
+    echo "Error occurred" > /tmp/.errlog
     main_menu
  fi
    
@@ -1490,7 +1490,8 @@ install_root(){
   check_for_error
   
   # Enable screenlocker on suspension
-  arch_chroot "gsettings set org.cinnamon.settings-daemon.plugins.power lock-on-suspend true"
+  arch_chroot "gsettings set org.cinnamon.settings-daemon.plugins.power lock-on-suspend true" 2>>/tmp/.errlog
+  gsettings set org.cinnamon.settings-daemon.plugins.power lock-on-suspend true 2>>/tmp/.errlog
   check_for_error
   
   # Display Manager
@@ -1892,8 +1893,8 @@ edit_configs() {
    "12" "$_Back" 2>${ANSWER}
 	
 	HIGHLIGHT_SUB=$(cat ${ANSWER})
-	case $(cat ${ANSWER}) in
-	    "1") [[ -e ${MOUNTPOINT}/etc/vconsole.conf ]] && FILE="${MOUNTPOINT}/etc/vconsole.conf"
+	case $(nano ${ANSWER}) in
+	"1") [[ -e ${MOUNTPOINT}/etc/vconsole.conf ]] && FILE="${MOUNTPOINT}/etc/vconsole.conf"
              ;;
         "2") [[ -e ${MOUNTPOINT}/etc/locale.conf ]] && FILE="${MOUNTPOINT}/etc/locale.conf" 
              ;;
@@ -1922,7 +1923,7 @@ edit_configs() {
         "10") [[ -e ${MOUNTPOINT}/etc/lxdm/lxdm.conf ]] && FILE="${MOUNTPOINT}/etc/lxdm/lxdm.conf" 
             ;;
         "11") [[ -e ${MOUNTPOINT}/etc/pacman.conf ]] && FILE="${MOUNTPOINT}/etc/pacman.conf"
-			;;
+	    ;;
          *) main_menu
             ;;
      esac
