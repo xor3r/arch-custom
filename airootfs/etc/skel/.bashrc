@@ -13,6 +13,7 @@ PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1
 # pacman aliases (if desired, adapt for your favourite AUR helper)
 alias pac="sudo /usr/bin/pacman -S"		# default action	- install one or more packages
 alias pacu="sudo /usr/bin/pacman -Syu"		# '[u]pdate'		- upgrade all packages to their newest version
+alias pacfu="sudo /usr/bin/pacman -Syyu"		# '[f]ull [u]pdate'		- update all packages and whole system
 alias pacr="sudo /usr/bin/pacman -Rns"		# '[r]emove'		- uninstall one or more packages
 alias pacs="/usr/bin/pacman -Ss"		# '[s]earch'		- search for a package using one or more keywords
 alias paci="/usr/bin/pacman -Si"		# '[i]nfo'		- show information about a package
