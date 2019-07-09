@@ -23,4 +23,4 @@ sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
 systemctl enable pacman-init.service choose-mirror.service NetworkManager.service
 systemctl set-default graphical.target
-
+gsettings set org.cinnamon.settings-daemon.plugins.power lock-on-suspend true
