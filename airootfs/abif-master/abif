@@ -1491,7 +1491,6 @@ install_root(){
   
   # Enable screenlocker on suspension
   arch_chroot "gsettings set org.cinnamon.settings-daemon.plugins.power lock-on-suspend true" 2>>/tmp/.errlog
-  check_for_error
   
   # Display Manager
   # arch_chroot "systemctl enable lxdm" 2>>/tmp/.errlog
@@ -1892,7 +1891,7 @@ edit_configs() {
    "12" "$_Back" 2>${ANSWER}
 	
 	HIGHLIGHT_SUB=$(cat ${ANSWER})
-	case $(nano ${ANSWER}) in
+	case $(cat ${ANSWER}) in
 	"1") [[ -e ${MOUNTPOINT}/etc/vconsole.conf ]] && FILE="${MOUNTPOINT}/etc/vconsole.conf"
              ;;
         "2") [[ -e ${MOUNTPOINT}/etc/locale.conf ]] && FILE="${MOUNTPOINT}/etc/locale.conf" 
