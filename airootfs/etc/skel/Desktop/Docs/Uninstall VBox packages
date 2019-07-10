@@ -7,6 +7,4 @@ Do it only if you installed this distro on your host system, not on the virtualb
 
 Open up terminal and fun following commands in order to uninstall vbox additional packages
 
-$ sudo post-clean
 $ sudo pacman -Rns virtualbox-guest-utils virtualbox-guest-dkms --noconfirm 
-$ sudo rm /etc/modules-load.d/virtualbox.conf
