@@ -21,6 +21,6 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-gsettings set org.cinnamon.settings-daemon.plugins.power lock-on-suspend true
+DISPLAY=:0 gsettings set org.cinnamon.settings-daemon.plugins.power lock-on-suspend true
 systemctl enable pacman-init.service choose-mirror.service NetworkManager.service
 systemctl set-default graphical.target
