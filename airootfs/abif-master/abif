@@ -1487,11 +1487,7 @@ install_root(){
   
   # Enable lightdm
   arch_chroot "systemctl enable lightdm -f" 2>>/tmp/.errlog
-  check_for_error
-  
-  # Enable screenlocker on suspension
-  DISPLAY=:0 gsettings set org.cinnamon.settings-daemon.plugins.power lock-on-suspend true 2>>/tmp/.errlog
-  check_for_error
+  check_for_error  
   
   # Display Manager
   # arch_chroot "systemctl enable lxdm" 2>>/tmp/.errlog
