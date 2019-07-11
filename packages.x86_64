@@ -54,9 +54,14 @@ file-roller
 firefox
 gparted
 git
-fakeroot
 reflector
 gnome-calculator
+
+# some of base-devel
+fakeroot
+binutils
+make
+gcc
 
 # java (archlinux-java to switch version)
 jre8-openjdk-headless
