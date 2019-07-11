@@ -56,12 +56,7 @@ gparted
 git
 reflector
 gnome-calculator
-
-# some of base-devel
-fakeroot
-binutils
-make
-gcc
+base-devel
 
 # java (archlinux-java to switch version)
 jre8-openjdk-headless
