@@ -13,4 +13,6 @@ fi
 
 cinnamon-screensaver &
 DISPLAY=:0 gsettings set org.cinnamon.settings-daemon.plugins.power lock-on-suspend true &
+DISPLAY=:0 gsettings set org.cinnamon.desktop.lockdown disable-lock-screen false &
+DISPLAY=:0 gsettings set org.cinnamon.desktop.screensaver lock-enabled true &
 exec cinnamon-session
