@@ -5,7 +5,6 @@
 Open up terminal and run following commands in order to install YAY - AUR helper:
 
 $ cd ~/
-$ sudo pacman -S binutils
 $ git clone https://aur.archlinux.org/yay.git
 $ cd yay/
 $ makepkg -si
