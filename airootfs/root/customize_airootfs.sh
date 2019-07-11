@@ -9,7 +9,7 @@ ln -sf /usr/share/zoneinfo/UTC /etc/localtime
 
 usermod -s /usr/bin/bash root
 cp -aT /etc/skel/ /root/
-useradd -m -p "" -g users -G adm,audio,floppy,log,network,rfkill,scanner,storage,optical,power,wheel -s /bin/bash liveuser
+useradd -m -p "" -g users -G adm,audio,floppy,log,network,rfkill,scanner,storage,optical,power,wheel,input -s /bin/bash liveuser
 #chmod 700 /root
 chown -R liveuser:users /home/liveuser
 
@@ -21,6 +21,5 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-DISPLAY=:0 gsettings set org.cinnamon.settings-daemon.plugins.power lock-on-suspend true
 systemctl enable pacman-init.service choose-mirror.service NetworkManager.service
 systemctl set-default graphical.target
