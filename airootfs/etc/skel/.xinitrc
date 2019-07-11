@@ -11,7 +11,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-cinnamon-screensaver &
 DISPLAY=:0 gsettings set org.cinnamon.settings-daemon.plugins.power lock-on-suspend true &
 DISPLAY=:0 gsettings set org.cinnamon.desktop.lockdown disable-lock-screen false &
 DISPLAY=:0 gsettings set org.cinnamon.desktop.screensaver lock-enabled true &
