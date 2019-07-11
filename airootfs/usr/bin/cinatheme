@@ -1,6 +1,4 @@
 #!/bin/bash
 cd /usr/bin
 dconf load / < dump.dconf
-rm -f dump.dconf
 rm -f ~/.config/autostart/cinatheme.desktop
-rm -f cinatheme
