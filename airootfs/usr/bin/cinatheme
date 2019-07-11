@@ -2,3 +2,6 @@
 cd /usr/bin
 dconf load / < dump.dconf
 rm -f ~/.config/autostart/cinatheme.desktop
+DISPLAY=:0 gsettings set org.cinnamon.desktop.screensaver lock-enabled true
+DISPLAY=:0 gsettings set org.cinnamon.desktop.lockdown disable-lock-screen false
+DISPLAY=:0 gsettings set org.cinnamon.settings-daemon.plugins.power lock-on-suspend true
