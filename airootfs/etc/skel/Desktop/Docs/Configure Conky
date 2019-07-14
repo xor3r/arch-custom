@@ -2,6 +2,8 @@
 *  Conky Configuration *
 ************************
 
+
+All commands to type into terminal are written after $ sign.
 Conky is a system monitor, which can be manually configured
 
 1. Create a file named .conkyrc in your home directory
