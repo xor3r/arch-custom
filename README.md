@@ -7,11 +7,15 @@ Code apdopted from Carl Duff's pacbang-iso git repo and Midfingr's arch_livecd g
 - https://github.com/archtrorg/pacbang-iso
 - https://github.com/midfingr/arch_livecd
 
-
+### Credits
 Special thanks to [__Dan__ (_midfinrg_)](https://github.com/midfingr) and his [YouTube channel](https://www.youtube.com/user/midfingr).\
 May your soul rest in peace.\
 Your work will never be forgotten.
 :heart:
+
+Background images were taken from __'Everlasting Summer'__ game.\
+All rights belong to their respectful owners at [_Soviet Games_](https://sovietgames.su/).\
+This piece of software is distributed freely, without any additional payments.
 
 
 ### Usage  :cactus:
