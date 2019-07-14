@@ -2,5 +2,12 @@
 * Setup a reflection for packages *
 ***********************************
 
-$ sudo pacman -Syy  # update your system's db
+
+All commands to type into terminal are written after $ sign.
+Open up terminal and run following commands:
+
+# Update your system's database
+$ sudo pacman -Syy
+
+# Set mirrors for your country
 $ reflector -c 'Your-Country' -f 12 -l 12 -n 12 --verbose --save /etc/pacman.d/mirrorlist
