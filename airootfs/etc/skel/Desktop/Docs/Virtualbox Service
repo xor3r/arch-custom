@@ -4,15 +4,14 @@
 
 !! ONLY IF RUNNING IN VIRTUALBOX !!
 
-Type in the terminal:
+All commands to type into terminal are written after $ sign.
+Open up terminal and run following commands:
 
-$ sudo pacman -S linux-headers
+$ pac linux-headers
 
-Wait for compilation ...
-While still in a terminal type:
-
+# Wait for compilation ...
+# While still in a terminal, type:
 $ sudo systemctl enable vboxservice
 
-Reboot your system:
-
+# Reboot your system:
 $ reboot
