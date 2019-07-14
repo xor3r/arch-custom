@@ -7,70 +7,73 @@ You can use "pac" instead of "sudo pacman"
 Check out full list of aliases in ~/.bashrc file
 Here is a list of useful software that you may wish to install:
 
+All commands to type into terminal are written after $ sign.
+Open up terminal and run following commands:
 
 # Libre Office
-$ sudo pacman -S libreoffice
+$ pac libreoffice
 
 # GIMP aka GNU Image Manipulation Program (Advanced Photo Editor)
-$ sudo pacman -S gimp
+$ pac gimp
 
 # GNOME Calendar (Time Managing Software)
-$ sudo pacman -S gnome-calendar
+$ pac gnome-calendar
 
 # Rclone file cloner into Google Drive, Dropbox, etc.
-$ sudo pacman -S rclone
+$ pac rclone
 
 # RSS reader
-$ sudo pacman -S quiterss
+$ pac quiterss
 
 # PAMAC (GUI Package Manager)
 $ yay -S pamac-aur
 
 # Calibre, E-book reader and file converter 
-$ sudo pacman -S calibre
+$ pac calibre
 
 # Network Monitor/Scanner
-$ sudo pacman -S nmap
+$ pac nmap
 
 # Arduino IDE
-$ sudo pacman -S arduino
+$ pac arduino
+
 
 ******************
 * For developers *
 ******************
 
 # Code::Blocks C/C++
-$ sudo pacman -S codeblocks
+$ pac codeblocks
 
 # Eclipse Java EE
-$ sudo pacman -S eclipse-jee
+$ pac eclipse-jee
 
 # Eclipse Java
-$ sudo pacman -S eclipse-java
+$ pac eclipse-java
 
 # Eclipse C/C++
-$ sudo pacman -S eclipse-cpp
+$ pac eclipse-cpp
 
 # Eclipse PHP
-$ sudo pacman -S eclipse-php
+$ pac eclipse-php
 
 # Eclipse JavaScript and Web
-$ sudo pacman -S eclipse-javascript
+$ pac eclipse-javascript
 
 # Netbeans Python, Java, Ruby, etc.
-$ sudo pacman -S netbeans
+$ pac netbeans
 
 # PyCharm Python
-$ sudo pacman -S pycharm-community-edition
+$ pac pycharm-community-edition
 
 # Spyder Python2
-$ sudo pacman -S spyder2
+$ pac spyder2
 
 # Spyder Python3
-$ sudo pacman -S spyder3
+$ pac spyder3
 
 # IntelliJ Java
-$ sudo pacman -S intellij-idea-community-edition
+$ pac intellij-idea-community-edition
 
 # JSON reading tool
 $ wget https://github.com/antonmedv/fx/releases/download/14.0.1/fx-linux.zip
