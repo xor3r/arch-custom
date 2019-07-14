@@ -11,6 +11,9 @@ https://en.wikipedia.org/wiki/Wikipedia:IRC/Tutorial
 # Replace <...> with your data!
 
 
+All commands to type into terminal are written after $ sign.
+Open up terminal and run following commands:
+
 # Start irssi:
 $ irssi
 
