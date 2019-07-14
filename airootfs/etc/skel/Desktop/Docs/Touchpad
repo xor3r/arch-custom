@@ -1,0 +1,22 @@
+*************************************
+* Additional Touchpad Configuration *
+*************************************
+
+# Install libinput-gestures from AUR:
+$ yay -S libinput-gestures
+
+# Copy config file from /etc/libinput-gestures.conf into ~/.config:
+$ sudo cp /etc/libinput-gestures.conf ~/.config
+
+# Insert some useful touchpad gestures at the end of a file:
+
+gesture swipe right 3 xdotool key Ctrl+Tab
+gesture swipe left 3 xdotool key Ctrl+Alt+Tab
+gesture pinch in 2 xdotool key Ctrl+minus
+gesture pinch out 2 xdotool key Ctrl+plus
+
+# Close and safe file
+# Logout/Reboot
+
+# Additional information can be found at:
+# https://ethans.me/codes/optimize-touchpad-performance-on-linux-en_US
