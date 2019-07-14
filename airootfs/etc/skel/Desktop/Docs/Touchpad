@@ -2,6 +2,9 @@
 * Additional Touchpad Configuration *
 *************************************
 
+All commands to type into terminal are written after $ sign.
+Open up terminal and run following commands:
+
 # Install libinput-gestures from AUR:
 $ yay -S libinput-gestures
 
