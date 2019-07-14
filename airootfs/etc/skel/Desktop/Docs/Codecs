@@ -5,7 +5,8 @@
 Post Install Addendum
 Here a some suggested packages you may wish to install
 
-Type in the terminal:
+All commands to type into terminal are written after $ sign.
+Open up terminal and run following commands:
 
 $ pac gstreamer0.10-bad-plugins gstreamer0.10-base-plugins gstreamer0.10-ffmpeg gstreamer0.10-good-plugins gstreamer0.10-ugly-plugins gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly
 $ pac ffmpegthumbnailer
