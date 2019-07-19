@@ -37,6 +37,8 @@ $ pac nmap
 # Arduino IDE
 $ pac arduino
 
+# Screenshot Maker
+$ pac gnome-screenshot
 
 ******************
 * For developers *
