@@ -38,3 +38,4 @@ These features may not be enabled after clean installation due to an unknown err
 ### Contributing   :cactus:
 Main features that I need help with are:
 * Enable screen locking after manual logout (as it is with locking after suspension)
+* Solve error with login prompt appearing twice after boot (probably because of _pam.d_ misconfiguration)
