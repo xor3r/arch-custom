@@ -1481,19 +1481,18 @@ install_root(){
 
   # Fix NetworkManager
   arch_chroot "systemctl enable NetworkManager -f" 2>>/tmp/.errlog
+  
+  #Fix dhcpcd
+  arch_chroot "systemctl disable dhcpcd@.service" 2>>/tmp/.errlog
+  arch_chroot "systemctl enable dhcpcd.service" 2>>/tmp/.errlog
 
   # Keyboard config for vc and x11
   [[ -e /tmp/vconsole.conf ]] && cp /tmp/vconsole.conf ${MOUNTPOINT}/etc/vconsole.conf 2>>/tmp/.errlog
   [[ -e /tmp/01-keyboard-layout.conf ]] && cp -f /tmp/01-keyboard-layout.conf ${MOUNTPOINT}/etc/X11/xorg.conf.d/$(ls ${MOUNTPOINT}/etc/X11/xorg.conf.d/ | grep "keyboard") 2>>/tmp/.errlog
   
-  # Enable lightdm
-  arch_chroot "systemctl enable lightdm -f" 2>>/tmp/.errlog
-  check_for_error  
-  
-  # Display Manager
-  # arch_chroot "systemctl enable lxdm" 2>>/tmp/.errlog
-  # cp -f /inst/lxdm.conf ${MOUNTPOINT}/etc/lxdm/lxdm.conf 2>>/tmp/.errlog
-  # [[ -d ${MOUNTPOINT}/inst ]] && rm -R ${MOUNTPOINT}/inst &> /dev/null 2>>/tmp/.errlog
+  # Enable gdm
+  arch_chroot "systemctl enable gdm -f" 2>>/tmp/.errlog
+  check_for_error
   
 }
 
