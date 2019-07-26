@@ -1490,6 +1490,9 @@ install_root(){
   arch_chroot "systemctl enable gdm -f" 2>>/tmp/.errlog
   check_for_error
   
+  # Additional config
+  arch_chroot "chmod u+s /bin/ping" 2>>/tmp/.errlog
+  
 }
 
 # Install Bootloader
