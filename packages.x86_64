@@ -40,7 +40,7 @@ faenza-icon-theme
 
 # desktop
 cinnamon
-gdm
+lxdm
 
 # additional software
 lxterminal
