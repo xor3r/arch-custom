@@ -1454,8 +1454,8 @@ install_root(){
   # user files
   rm -f $MOUNTPOINT/home/$ISO_USER/Desktop/installArch.desktop 2>>/tmp/.errlog
   # rm -f ${MOUNTPOINT}/home/$ISO_USER/.bash_profile 2>>/tmp/.errlog
-  # rm -f ${MOUNTPOINT}/home/$ISO_USER/.xinitrc 2>>/tmp/.errlog
-  # rm -f ${MOUNTPOINT}/home/$ISO_USER/.xsession 2>>/tmp/.errlog
+  rm -f ${MOUNTPOINT}/home/$ISO_USER/.xinitrc 2>>/tmp/.errlog
+  rm -f ${MOUNTPOINT}/home/$ISO_USER/.xsession 2>>/tmp/.errlog
   rm -rf ${MOUNTPOINT}/home/$ISO_USER/bash_root 2>>/tmp/.errlog
   
   # clean out some entries
@@ -1470,7 +1470,7 @@ install_root(){
   rm ${MOUNTPOINT}/etc/systemd/system/default.target 2>>/tmp/.errlog
 
   # remove packages
-  arch_chroot "pacman -Rns geany --noconfirm"
+  arch_chroot "pacman -Rns geany dhcpcd --noconfirm"
 
   # Journal
   sed -i 's/volatile/auto/g' ${MOUNTPOINT}/etc/systemd/journald.conf 2>>/tmp/.errlog
@@ -1481,10 +1481,6 @@ install_root(){
 
   # Fix NetworkManager
   arch_chroot "systemctl enable NetworkManager -f" 2>>/tmp/.errlog
-  
-  #Fix dhcpcd
-  arch_chroot "systemctl disable dhcpcd@.service" 2>>/tmp/.errlog
-  arch_chroot "systemctl enable dhcpcd.service" 2>>/tmp/.errlog
 
   # Keyboard config for vc and x11
   [[ -e /tmp/vconsole.conf ]] && cp /tmp/vconsole.conf ${MOUNTPOINT}/etc/vconsole.conf 2>>/tmp/.errlog
