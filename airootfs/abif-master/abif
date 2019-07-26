@@ -1460,6 +1460,7 @@ install_root(){
   
   # clean out some entries
   arch_chroot "rm -f /usr/share/applications/bssh.desktop /usr/share/applications/bvnc.desktop /usr/share/applications/avahi-discover.desktop /usr/share/applications/qv4l2.desktop /usr/share/applications/qvidcap.desktop" 2>>/tmp/.errlog
+  rm -rf ${MOUNTPOINT}/etc/skel 2>>/tmp/.errlog
   
   # clean out archiso files from install
   find ${MOUNTPOINT}/usr/lib/initcpio -name archiso* -type f -exec rm '{}' \;
@@ -1485,8 +1486,9 @@ install_root(){
   [[ -e /tmp/vconsole.conf ]] && cp /tmp/vconsole.conf ${MOUNTPOINT}/etc/vconsole.conf 2>>/tmp/.errlog
   [[ -e /tmp/01-keyboard-layout.conf ]] && cp -f /tmp/01-keyboard-layout.conf ${MOUNTPOINT}/etc/X11/xorg.conf.d/$(ls ${MOUNTPOINT}/etc/X11/xorg.conf.d/ | grep "keyboard") 2>>/tmp/.errlog
   
-  # Enable lxdm
+  # Enable lxdm and its config
   arch_chroot "systemctl enable lxdm -f" 2>>/tmp/.errlog
+  cp -R /etc/lxdm ${MOUNTPOINT}/etc/lxdm 2>>/tmp/.errlog
   check_for_error
   
   # Additional config
