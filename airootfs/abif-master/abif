@@ -1460,7 +1460,7 @@ install_root(){
   
   # clean out some entries
   arch_chroot "rm -f /usr/share/applications/bssh.desktop /usr/share/applications/bvnc.desktop /usr/share/applications/avahi-discover.desktop /usr/share/applications/qv4l2.desktop /usr/share/applications/qvidcap.desktop" 2>>/tmp/.errlog
-  arch_chroot "rm -rf /etc/skel"
+  arch_chroot "rm -rf /etc/skel" 2>>/tmp/.errlog
   
   # clean out archiso files from install
   find ${MOUNTPOINT}/usr/lib/initcpio -name archiso* -type f -exec rm '{}' \;
@@ -1469,8 +1469,8 @@ install_root(){
   rm -R ${MOUNTPOINT}/etc/systemd/system/getty@tty1.service.d 2>>/tmp/.errlog
   rm ${MOUNTPOINT}/etc/systemd/system/default.target 2>>/tmp/.errlog
 
-  # remove packages
-  arch_chroot "pacman -Rns geany dhcpcd --noconfirm"
+  # remove package(s)
+  arch_chroot "pacman -Rns dhcpcd --noconfirm"
 
   # Journal
   sed -i 's/volatile/auto/g' ${MOUNTPOINT}/etc/systemd/journald.conf 2>>/tmp/.errlog
