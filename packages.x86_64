@@ -57,6 +57,7 @@ reflector
 gnome-calculator
 base-devel
 whois
+gnupg
 
 # java (archlinux-java to switch version)
 jre8-openjdk-headless
@@ -84,7 +85,6 @@ os-prober
 hdparm
 ipw2100-fw
 ipw2200-fw
-iwd
 lftp
 linux-atm
 lsscsi
