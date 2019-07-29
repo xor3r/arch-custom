@@ -1,0 +1,50 @@
+****************************
+*   Switch to LTS kernel   *
+****************************
+
+Warning! Backup all your files to avoid undesirable side effects!
+
+All commands to type into terminal are written after $ sign.
+Open up terminal and run following commands:
+
+# Check which version of kernel your system runs:
+$ uname -r
+
+# If it is not an LTS version:
+$ pac linux-lts linux-lts-headers
+$ reboot
+
+# Now your system should have the lts version enabled by default:
+$ uname -r
+
+# I do not advise to remove another version of kernel, but if you really want to:
+$ pacr linux linux-headers
+
+## There may also be a problem with grub, and it may start to boot into blind mode.
+## Then you should fix your screen resolution in grub configuration file (/etc/default/grub).
+## To do this, use Arch live-usb/cd (you may use my live version if you want to), and then:
+
+# Mount root partition (where # is a number of your device):
+$ mount /dev/sda# /mnt 
+
+# Mount boot partition (where # is a number of your device):
+$ mount /dev/sda# /mnt/boot
+
+# Change root directory:
+$ arch-chroot /mnt
+
+## If you wish to try to fix grub, then:
+# Open any text editor and replace the line which contains GRUB_GFXMODE="auto" with your screen's resolution (e.g.: GRUB_GFXMODE="1920x1080"):
+$ nano
+
+# Exit root and reboot:
+$ exit
+$ reboot
+
+## If you wish to return to the old kernel, then:
+# Reinstall old kernel:
+$ pac linux linux-headers
+
+# Exit root and reboot:
+$ exit
+$ reboot
