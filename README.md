@@ -39,3 +39,7 @@ These features may not be enabled after clean installation due to an unknown err
 Main features that I need help with are:
 * Enable screen locking after manual logout (as it is with locking after suspension)
 * Solve error with login prompt appearing twice after boot (probably because of _pam.d_ misconfiguration)
+
+### Arctic Vault   :snowman:
+I hope that this repository will be included into GitHub Archive Program and will bring some help to the future generations!
+Use Arch Linux and get familiar with all of its features.  :heart:
